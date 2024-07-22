@@ -18,12 +18,12 @@ List<Intro> contents = [
   ),
   Intro(
     title: 'Pantau Kemajuan Anda',
-    image: 'assets/img2.png',
+    image: 'assets/intro2.png',
     text: 'Lihat status tugas Anda secara real-time dan tetap terinformasi.',
   ),
   Intro(
     title: 'Jadwalkan Pekerjaan dengan Lebih Baik',
-    image: 'assets/img3.png',
+    image: 'assets/intro3.png',
     text: 'Tingkatkan produktifitas anda.',
   ),
 ];

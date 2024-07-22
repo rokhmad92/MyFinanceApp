@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
                   children: [
                     Text(
                       'Belum punya akun?',
-                      style: Theme.of(context).primaryTextTheme.displaySmall,
+                      style: Theme.of(context).primaryTextTheme.titleSmall,
                     ),
                     const SizedBox(
                       width: 7,
@@ -106,8 +106,10 @@ class _LoginState extends State<Login> {
                       child: Text('Daftar Akun',
                           style: Theme.of(context)
                               .primaryTextTheme
-                              .displaySmall!
-                              .copyWith(fontWeight: FontWeight.bold)),
+                              .titleSmall!
+                              .copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1)),
                     ),
                   ],
                 ),
