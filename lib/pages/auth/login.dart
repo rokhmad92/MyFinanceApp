@@ -40,11 +40,11 @@ class _LoginState extends State<Login> {
               ),
             ),
             Text(
-              'Login Form',
+              'Form Login',
               style: Theme.of(context).primaryTextTheme.titleLarge,
             ),
             Text(
-              'Lengkapi form login untuk menggunakan aplikasi',
+              'Lengkapi form login untuk bisa menggunakan aplikasi',
               style: Theme.of(context).primaryTextTheme.titleSmall,
             ),
             const SizedBox(
@@ -83,9 +83,10 @@ class _LoginState extends State<Login> {
               height: 20,
             ),
             ButtonElevated(
-              onPress: () => {Navigator.pushReplacementNamed(context, '/home')},
+              onPress: () =>
+                  {Navigator.pushReplacementNamed(context, 'userPage')},
               text: 'Login',
-              styleText: Theme.of(context).primaryTextTheme.displaySmall,
+              styleText: Theme.of(context).primaryTextTheme.displayMedium,
             ),
             Expanded(
               child: Padding(
@@ -102,7 +103,7 @@ class _LoginState extends State<Login> {
                       width: 7,
                     ),
                     InkWell(
-                      onTap: () => {Navigator.pushNamed(context, '/register')},
+                      onTap: () => {Navigator.pushNamed(context, 'register')},
                       child: Text('Daftar Akun',
                           style: Theme.of(context)
                               .primaryTextTheme

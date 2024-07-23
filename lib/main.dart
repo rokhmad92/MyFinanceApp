@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:myfinance/pages/auth/login.dart';
 import 'package:myfinance/pages/auth/register.dart';
-import 'package:myfinance/pages/home.dart';
+
 import 'package:myfinance/pages/intro.dart';
+
+import 'package:myfinance/widget/bottom_bar.dart';
 
 void main() {
   // fullScreen mode
@@ -23,9 +25,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/', // URL Pertama kali di kunjungi saat buka aplikasi
       routes: {
         '/': (context) => const Intro(),
-        '/login': (context) => const Login(),
-        '/register': (context) => const Register(),
-        '/home': (context) => const Home(),
+        'login': (context) => const Login(),
+        'register': (context) => const Register(),
+        'userPage': (context) => const BottomBar(),
       },
     );
   }

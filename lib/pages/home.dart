@@ -17,8 +17,8 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final DateTime firstYear = DateTime(_today.year, 1, 1);
-    final DateTime lastYear = DateTime(_today.year, 12, 31);
+    final DateTime firstYear = DateTime(_today.year - 1, 1, 1);
+    final DateTime lastYear = DateTime(_today.year + 1, 12, 31);
 
     return Scaffold(
       body: Container(
@@ -47,13 +47,13 @@ class _HomeState extends State<Home> {
                   clipBehavior: Clip.none,
                   alignment: Alignment.topCenter,
                   children: [
-                    const CardInfo(),
                     Positioned(
-                        top: 50,
+                        top: 0,
                         left: 0,
                         right: 0,
                         bottom: 0,
                         child: SingleChildScrollView(
+                          padding: const EdgeInsets.only(top: 50),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -108,11 +108,12 @@ class _HomeState extends State<Home> {
                               )
                             ],
                           ),
-                        ))
+                        )),
+                    const CardInfo(),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

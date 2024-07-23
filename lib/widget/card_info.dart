@@ -14,7 +14,7 @@ class CardInfo extends StatelessWidget {
         width: GlobalVariable.deviceWidth(context) * 0.8,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Colors.grey[100],
+            color: Colors.white,
             border: Border.all(width: 1, color: Colors.grey)),
         child: Row(
           children: [
@@ -37,7 +37,7 @@ class CardInfo extends StatelessWidget {
                           end: Alignment.centerLeft,
                           colors: [
                             Color(0xFFC8E6C9),
-                            Color(0xFFF5F5F5),
+                            Colors.white,
                           ],
                         ),
                       ),
@@ -86,7 +86,7 @@ class CardInfo extends StatelessWidget {
                               end: Alignment.centerLeft,
                               colors: [
                                 Color(0xFFFFCDD2),
-                                Color(0xFFF5F5F5),
+                                Colors.white,
                               ],
                             ),
                           ),

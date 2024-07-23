@@ -88,10 +88,11 @@ class _IntroState extends State<Intro> {
               height: 20,
             ),
             ButtonElevated(
-              text: locationPage == contents.length - 1 ? 'Login' : 'Next',
+              text:
+                  locationPage == contents.length - 1 ? 'Login' : 'Selanjutnya',
               onPress: () {
                 if (locationPage == contents.length - 1) {
-                  Navigator.pushNamed(context, '/login');
+                  Navigator.pushNamed(context, 'login');
                 } else {
                   _controller.nextPage(
                     duration: const Duration(milliseconds: 300),
