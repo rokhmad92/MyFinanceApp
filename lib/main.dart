@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:myfinance/pages/auth/login.dart';
 import 'package:myfinance/pages/auth/register.dart';
-
 import 'package:myfinance/pages/intro.dart';
-
 import 'package:myfinance/widget/bottom_bar.dart';
 
 void main() {
-  // fullScreen mode
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-
   runApp(const MyApp());
 }
 
@@ -19,6 +14,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // fullScreen
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky,
+        overlays: [
+          SystemUiOverlay.bottom,
+        ]);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: settingTheme(),

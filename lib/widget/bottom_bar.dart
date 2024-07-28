@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:myfinance/pages/home.dart';
 import 'package:myfinance/pages/input.dart';
-import 'package:myfinance/pages/laporan.dart';
-import 'package:myfinance/pages/pengaturan.dart';
+import 'package:myfinance/pages/report.dart';
+import 'package:myfinance/pages/category.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
 
   @override
-  _BottomBarState createState() => _BottomBarState();
+  State<BottomBar> createState() => _BottomBarState();
 }
 
 class _BottomBarState extends State<BottomBar> {
@@ -16,8 +16,8 @@ class _BottomBarState extends State<BottomBar> {
   final List<Widget> _screens = [
     const Home(),
     const Input(),
-    const Laporan(),
-    const Pengaturan(),
+    const Report(),
+    const Categorys(),
   ];
 
   @override
@@ -25,7 +25,7 @@ class _BottomBarState extends State<BottomBar> {
     return Scaffold(
       body: _screens[_currentIndex],
       bottomNavigationBar: NavigationBar(
-        indicatorColor: Colors.grey[100],
+        indicatorColor: Colors.grey[300],
         backgroundColor: Colors.grey[100],
         height: 60,
         selectedIndex: _currentIndex,
@@ -34,38 +34,34 @@ class _BottomBarState extends State<BottomBar> {
             _currentIndex = index;
           });
         },
-        destinations: [
+        destinations: const [
           NavigationDestination(
             selectedIcon: Icon(
               Icons.home,
-              color: Theme.of(context).primaryColor,
             ),
-            icon: const Icon(Icons.home_outlined),
+            icon: Icon(Icons.home_outlined),
             label: 'Beranda',
           ),
           NavigationDestination(
               selectedIcon: Icon(
                 Icons.view_agenda,
-                color: Theme.of(context).primaryColor,
               ),
-              icon: const Icon(
+              icon: Icon(
                 Icons.view_agenda_outlined,
               ),
               label: 'Input Data'),
           NavigationDestination(
               selectedIcon: Icon(
                 Icons.account_balance,
-                color: Theme.of(context).primaryColor,
               ),
-              icon: const Icon(Icons.account_balance_outlined),
+              icon: Icon(Icons.account_balance_outlined),
               label: 'Laporan'),
           NavigationDestination(
               selectedIcon: Icon(
-                Icons.settings,
-                color: Theme.of(context).primaryColor,
+                Icons.category,
               ),
-              icon: const Icon(Icons.settings_outlined),
-              label: 'Pengaturan'),
+              icon: Icon(Icons.category_outlined),
+              label: 'Kategori'),
         ],
       ),
     );

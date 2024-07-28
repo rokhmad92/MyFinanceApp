@@ -12,18 +12,18 @@ class Intro {
 
 List<Intro> contents = [
   Intro(
-    title: 'Mudah Kelola Uang',
+    title: 'Pantau Keuangan Anda Secara Real-Time',
     image: 'assets/intro1.png',
-    text: 'Organisasi yang efisien dengan daftar tugas yang teratur.',
+    text: 'Lihat kesehatan finansial Anda kapan saja. Pantau pengeluaran dan pemasukan dengan cepat dan akurat.',
   ),
   Intro(
-    title: 'Pantau Kemajuan Anda',
+    title: 'Pencatatan Transaksi Mudah Dan Cepat',
     image: 'assets/intro2.png',
-    text: 'Lihat status tugas Anda secara real-time dan tetap terinformasi.',
+    text: 'Mudah mencatat transaksi dan melihat laporan keuangan Anda. Pastikan tidak ada detail yang terlewat.',
   ),
   Intro(
-    title: 'Jadwalkan Pekerjaan dengan Lebih Baik',
+    title: 'Lihat Laporan Keuangan Anda Secara Instan',
     image: 'assets/intro3.png',
-    text: 'Tingkatkan produktifitas anda.',
+    text: 'Mudah mencatat transaksi dan melihat laporan keuangan Anda. Pastikan tidak ada detail yang terlewat.',
   ),
 ];

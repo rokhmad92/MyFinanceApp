@@ -16,7 +16,7 @@ class Navbar extends StatelessWidget {
           IconButton(
               onPressed: () {},
               icon: const Icon(
-                Icons.notifications_outlined,
+                Icons.logout,
                 color: Colors.white,
               ))
         ],

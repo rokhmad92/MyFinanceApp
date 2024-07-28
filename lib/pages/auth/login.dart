@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
               style: Theme.of(context).primaryTextTheme.titleLarge,
             ),
             Text(
-              'Lengkapi form login untuk bisa menggunakan aplikasi',
+              'Lengkapi form login untuk bisa menggunakan aplikasi.',
               style: Theme.of(context).primaryTextTheme.titleSmall,
             ),
             const SizedBox(
@@ -56,7 +56,6 @@ class _LoginState extends State<Login> {
               prefixIcon: Icon(Icons.person),
               backgroundColor: Colors.white,
               borderFocusColor: Colors.blue,
-              obscureText: false,
             ),
             const SizedBox(
               height: 10,

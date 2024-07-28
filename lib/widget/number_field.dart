@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
+import 'package:flutter/services.dart';
 
-class FormText extends StatelessWidget {
-  const FormText({
+class FormNumber extends StatelessWidget {
+  const FormNumber({
     super.key,
     this.prefixIcon,
     this.backgroundColor,
     this.borderColor,
     this.borderFocusColor,
     this.suffixIcon,
+    this.currency = false,
     required this.labelText,
     required this.hintText,
-    this.obscureText = false,
   });
 
   final Icon? prefixIcon;
@@ -18,14 +20,25 @@ class FormText extends StatelessWidget {
   final Color? borderColor;
   final Color? borderFocusColor;
   final GestureDetector? suffixIcon;
+  final bool currency;
   final String labelText;
   final String hintText;
-  final bool obscureText;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      obscureText: obscureText,
+      inputFormatters: currency
+          ? [
+              CurrencyTextInputFormatter.currency(
+                locale: 'id',
+                decimalDigits: 0,
+                symbol: 'Rp. ',
+              ),
+            ]
+          : [
+              FilteringTextInputFormatter.digitsOnly,
+            ],
+      keyboardType: TextInputType.number,
       decoration: InputDecoration(
         labelText: labelText,
         hintText: hintText,
